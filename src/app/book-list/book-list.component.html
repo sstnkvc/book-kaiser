@@ -1,5 +1,5 @@
-<div class="list ui middle aligned selection divided">
-  <a class="item" *ngFor="let book of booksArray">
+<!-- <div class="list ui middle aligned selection divided">
+  <div class="item" *ngFor="let book of booksArray">
     <img
       *ngIf="book.thumbnails && book.thumbnails[0] && book.thumbnails[0].url"
       class="ui tiny image"
@@ -19,5 +19,14 @@
         ISBN {{ book.isbn }}
       </div>
     </div>
-  </a>
+  </div>
+</div> -->
+
+<div class="ui middle aligned selection divided list">
+  <app-book-list-item
+    class="item"
+    *ngFor="let book of booksArray"
+    [book]="book"
+    (click)="showBookDetails(book)"
+  ></app-book-list-item>
 </div>
