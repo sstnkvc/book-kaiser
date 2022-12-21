@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { BookListItemComponent } from './book-list-item/book-list-item.component';
 import { BookListComponent } from './book-list/book-list.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { BookListComponent } from './book-list/book-list.component';
     BookListComponent,
     BookListItemComponent,
     BookDetailsComponent,
+    HomeComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],

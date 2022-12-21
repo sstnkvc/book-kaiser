@@ -27,6 +27,6 @@
     class="item"
     *ngFor="let book of booksArray"
     [book]="book"
-    (click)="showBookDetails(book)"
+    [routerLink]="['/books', book.isbn]"
   ></app-book-list-item>
 </div>

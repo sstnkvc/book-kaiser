@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Book } from '../shared/book';
 import { BookStoreService } from '../shared/book-store.service';
 
@@ -11,13 +11,7 @@ export class BookListComponent implements OnInit {
   constructor(private bookStoreService: BookStoreService) {}
   booksArray: Book[] = [];
 
-  @Output() onShowBookDetailsEvent = new EventEmitter<Book>();
-
   ngOnInit() {
     this.booksArray = this.bookStoreService.getAllBooks();
-  }
-
-  showBookDetails(selectedBook: Book) {
-    this.onShowBookDetailsEvent.emit(selectedBook);
   }
 }
